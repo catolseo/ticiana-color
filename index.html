@@ -62,7 +62,13 @@
           <select id="unit">
             <option value="L">литры</option>
             <option value="ml">миллилитры</option>
+            <option value="kg">килограммы</option>
+            <option value="g">граммы</option>
           </select>
+        </label>
+        <label id="densityLabel" hidden>
+          Плотность базы, г/мл
+          <input id="density" type="number" value="1.30" min="0.5" max="2.5" step="0.01" />
         </label>
       </div>
       <details id="areaDetails">
@@ -128,6 +134,6 @@
   </main>
 
   <script src="data.js?v=9a0b9cb9"></script>
-  <script src="app.js?v=df9fc0ef"></script>
+  <script src="app.js?v=080f4c53"></script>
 </body>
 </html>

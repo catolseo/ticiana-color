@@ -1,7 +1,7 @@
 "use strict";
 
 const ML_PER_L = 1000;
-const UNIT_LABEL = { L: "л", ml: "мл" };
+const UNIT_LABEL = { L: "л", ml: "мл", kg: "кг", g: "г" };
 // Stuccos quoted in m²/kg in the catalogue convert to m²/L using a typical
 // thick-paste density. AdsPro itself stores ProDens=1 placeholders for these,
 // so we use a fixed assumption rather than the (zeroed-out) per-base value.
@@ -53,6 +53,25 @@ function init() {
   $("calc").addEventListener("click", calculate);
   $("areaCalc").addEventListener("click", computeFromArea);
   $("yield").addEventListener("input", () => { $("yield").dataset.userEdited = "1"; });
+  $("unit").addEventListener("change", syncDensityVisibility);
+  $("density").addEventListener("input", () => { $("density").dataset.userEdited = "1"; });
+  syncDensityVisibility();
+}
+
+// Density input only matters when the user enters amount in kg/g (per AdsPro
+// docs — for L/mL the conversion to mL is unit-only and density is unused).
+// Hide the field when the unit doesn't need it; auto-fill from sp.dens[base]
+// when it does, unless the user has already overridden it.
+function syncDensityVisibility() {
+  const unit = $("unit").value;
+  const needs = unit === "kg" || unit === "g";
+  $("densityLabel").hidden = !needs;
+  if (needs && !$("density").dataset.userEdited) {
+    const sp = currentSubproduct();
+    const row = selectedRow();
+    const dens = sp?.dens?.[row?.[F_BASE]];
+    if (dens != null) $("density").value = dens;
+  }
 }
 
 function fillSelect(sel, items, toOption) {
@@ -120,6 +139,7 @@ function onProductChange() {
   }));
   if ($("subproduct").options.length) $("subproduct").selectedIndex = 0;
   delete $("yield").dataset.userEdited;
+  delete $("density").dataset.userEdited;
   syncCoverage(p);
   ensureProductLoaded(p.id).then(onSubproductChange);
 }
@@ -242,6 +262,8 @@ function onColorChange() {
   const hex = rgbToHex(row?.[F_RGB]);
   document.body.style.setProperty("--selected-color", hex || "transparent");
   document.body.classList.toggle("has-color", !!hex);
+  // Refresh density auto-fill: it may depend on the colour's base.
+  syncDensityVisibility();
 }
 
 function parseFormula(str) {
@@ -264,7 +286,9 @@ function calculate() {
 
   const amount = parseFloat($("amount").value);
   if (!(amount > 0)) return;
-  const unit = $("unit").value; // L | ml
+  const unit = $("unit").value; // L | ml | kg | g
+  // Density input is shown only for kg/g; for L/mL it's ignored.
+  const userDensity = parseFloat($("density").value) || 1.0;
 
   // Reference can size from ProSize[0]. Most products quote it in litres;
   // a few (mass-based stuccos) quote KG — convert to mL via the per-base
@@ -275,7 +299,12 @@ function calculate() {
   const refMl = refUnit === "KG"
     ? (refSize * ML_PER_L) / refDensity
     : refSize * ML_PER_L;
-  const targetMl = unit === "L" ? amount * ML_PER_L : amount;
+  const targetMl =
+      unit === "L"  ? amount * ML_PER_L
+    : unit === "ml" ? amount
+    : unit === "kg" ? (amount * ML_PER_L) / userDensity
+    : unit === "g"  ? amount / userDensity
+    :                 0;
 
   // ProMult from tint_book.ini: per-base strength correction (e.g. Fondo 1 base A = 1.26).
   const mult = sp.mult?.[baseCode] ?? 1.0;
