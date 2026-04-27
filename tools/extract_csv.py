@@ -18,6 +18,7 @@ Output:
 """
 
 import json
+import math
 import os
 import re
 import configparser
@@ -74,25 +75,28 @@ def linear_to_srgb(c):
 
 
 def synthesize_rgb(formula_pairs, cnt_rgb, can_ml):
-    """Linear-light mix of colorants over a white base, scaled by colorant volume fraction.
+    """Subtractive (Beer-Lambert) preview of pigment mixing over a white base.
 
-    Used as a preview when the database doesn't carry RGB. Gives a reasonable
-    qualitative hue, not a colorimetrically correct reproduction.
+    Used when the database doesn't carry RGB (AdsPro stores an opaque <color_int>
+    we couldn't decode). Each pigment absorbs per channel with coefficient
+    (1 - hex_channel/255); absorptions add weighted by concentration; reflected
+    light = exp(-absorption). STRENGTH compensates for absent K/S data —
+    real pigments are far more potent at low concentration than naive
+    volume-fraction mixing suggests, so without it most formulas would render
+    as near-white.
     """
-    total = sum(formula_pairs.values())
-    if total <= 0:
+    if can_ml <= 0 or not formula_pairs:
         return [255, 255, 255]
-    frac = min(1.0, total / can_ml) if can_ml else 1.0
-    mix = [0.0, 0.0, 0.0]
+    STRENGTH = 80.0
+    absorb = [0.0, 0.0, 0.0]
     for cid, amt in formula_pairs.items():
         rgb = cnt_rgb.get(cid)
         if not rgb:
             continue
-        w = amt / total
+        conc = (amt / can_ml) * STRENGTH
         for i in range(3):
-            mix[i] += w * srgb_to_linear(rgb[i])
-    blended = [frac * mix[i] + (1 - frac) * 1.0 for i in range(3)]
-    return [linear_to_srgb(v) for v in blended]
+            absorb[i] += conc * (1.0 - rgb[i] / 255.0)
+    return [round(max(0.0, min(1.0, math.exp(-a))) * 255) for a in absorb]
 
 
 def hex_to_rgb(h):
