@@ -17,6 +17,7 @@ Output:
   C:\\claude\\ticiana-color\\formulas\\p<i>.js        — formulas for one product line, lazy-load
 """
 
+import hashlib
 import json
 import math
 import os
@@ -285,17 +286,24 @@ def main():
     print(f"\ndata.js: {os.path.getsize(core_path):,} bytes, {len(product_catalog)} products")
     print(f"Total formulas: {total:,}")
 
-    # Bump cache-bust query string in index.html so users get fresh data.js/app.js
-    # without waiting for max-age=600 to expire on GitHub Pages CDN.
+    # Bump cache-bust query string in index.html using content hashes so
+    # GitHub Pages clients pick up changes immediately (max-age=600 otherwise
+    # serves stale assets for up to 10 minutes after a deploy). Hash-based
+    # bust changes whenever EITHER the data OR the script source changes.
     index_path = os.path.join(OUT_DIR, "index.html")
-    cache_bust = load_date or "0"
+
+    def short_hash(path):
+        return hashlib.sha1(open(path, "rb").read()).hexdigest()[:8]
+
+    data_v = short_hash(core_path)
+    app_v = short_hash(os.path.join(OUT_DIR, "app.js"))
     html = open(index_path, encoding="utf-8").read()
     html = re.sub(r'<script src="data\.js(?:\?v=[^"]*)?"></script>',
-                  f'<script src="data.js?v={cache_bust}"></script>', html)
+                  f'<script src="data.js?v={data_v}"></script>', html)
     html = re.sub(r'<script src="app\.js(?:\?v=[^"]*)?"></script>',
-                  f'<script src="app.js?v={cache_bust}"></script>', html)
+                  f'<script src="app.js?v={app_v}"></script>', html)
     open(index_path, "w", encoding="utf-8", newline="").write(html)
-    print(f"index.html cache-bust set to ?v={cache_bust}")
+    print(f"index.html cache-bust: data.js?v={data_v}, app.js?v={app_v}")
 
 
 if __name__ == "__main__":
