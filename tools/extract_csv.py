@@ -117,6 +117,7 @@ def read_ini():
 
     default = cp["Default_INI"]
     drop_ml = float(default.get("DropSize", "1.0"))
+    load_date = default.get("LoadDate", "").strip()  # yymmdd, e.g. "231215"
 
     base_codes = [s.strip() for s in default["ProList"].split(",")]
     base_text = parse_str_pairs(default["ProText"])  # e.g. "A-Белая"
@@ -167,7 +168,7 @@ def read_ini():
             "dens": dens,
             "mult": mult,
         })
-    return drop_ml, bases, colorants, products
+    return drop_ml, load_date, bases, colorants, products
 
 
 def read_book(path):
@@ -210,7 +211,7 @@ def write_js(path, var_assign, obj):
 
 
 def main():
-    drop_ml, bases, colorants, products = read_ini()
+    drop_ml, load_date, bases, colorants, products = read_ini()
     cnt_rgb = {c["id"]: hex_to_rgb(c["hex"]) for c in colorants}
 
     # Build flat product catalog. We use a 1-based numeric ID per product line for
@@ -266,8 +267,14 @@ def main():
 
     out_bases = {code: {"code": b["code"], "descr": b["descr"]} for code, b in bases.items()}
     out_colorants = colorants
+    # tint_book.ini stores LoadDate as yymmdd (e.g. "231215" → "15.12.2023").
+    if len(load_date) == 6 and load_date.isdigit():
+        version = f"AdsPro {load_date[4:6]}.{load_date[2:4]}.20{load_date[0:2]}"
+    else:
+        version = "AdsPro"
+    version += f" · {len(product_catalog)} продуктов · {total:,} формул".replace(",", " ")
     core = {
-        "version": "Ticiana Deluxe / AdsPro 23-09-2023",
+        "version": version,
         "drop_ml": drop_ml,
         "colorants": out_colorants,
         "bases": out_bases,
@@ -277,6 +284,18 @@ def main():
     write_js(core_path, "window.TICIANA_DATA", core)
     print(f"\ndata.js: {os.path.getsize(core_path):,} bytes, {len(product_catalog)} products")
     print(f"Total formulas: {total:,}")
+
+    # Bump cache-bust query string in index.html so users get fresh data.js/app.js
+    # without waiting for max-age=600 to expire on GitHub Pages CDN.
+    index_path = os.path.join(OUT_DIR, "index.html")
+    cache_bust = load_date or "0"
+    html = open(index_path, encoding="utf-8").read()
+    html = re.sub(r'<script src="data\.js(?:\?v=[^"]*)?"></script>',
+                  f'<script src="data.js?v={cache_bust}"></script>', html)
+    html = re.sub(r'<script src="app\.js(?:\?v=[^"]*)?"></script>',
+                  f'<script src="app.js?v={cache_bust}"></script>', html)
+    open(index_path, "w", encoding="utf-8", newline="").write(html)
+    print(f"index.html cache-bust set to ?v={cache_bust}")
 
 
 if __name__ == "__main__":
