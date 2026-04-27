@@ -268,12 +268,30 @@ def main():
 
     out_bases = {code: {"code": b["code"], "descr": b["descr"]} for code, b in bases.items()}
     out_colorants = colorants
-    # tint_book.ini stores LoadDate as yymmdd (e.g. "231215" → "15.12.2023").
+
+    # Russian noun pluralisation by count: 1 → singular, 2-4 → genitive sing,
+    # 5+ → genitive plural; with the 11-14 exception always taking gen plural.
+    def plural(n, one, few, many):
+        n100 = n % 100
+        if 11 <= n100 <= 14:
+            return many
+        n10 = n % 10
+        if n10 == 1:
+            return one
+        if 2 <= n10 <= 4:
+            return few
+        return many
+
+    # tint_book.ini stores LoadDate as yymmdd (e.g. "250703" → "03.07.2025").
     if len(load_date) == 6 and load_date.isdigit():
         version = f"AdsPro {load_date[4:6]}.{load_date[2:4]}.20{load_date[0:2]}"
     else:
         version = "AdsPro"
-    version += f" · {len(product_catalog)} продуктов · {total:,} формул".replace(",", " ")
+    n_prod = len(product_catalog)
+    prod_word = plural(n_prod, "продукт", "продукта", "продуктов")
+    formula_word = plural(total, "формула", "формулы", "формул")
+    total_str = f"{total:,}".replace(",", " ")
+    version += f" · {n_prod} {prod_word} · {total_str} {formula_word}"
     core = {
         "version": version,
         "drop_ml": drop_ml,
