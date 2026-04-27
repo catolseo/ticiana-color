@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ticiana Deluxe — калькулятор колорантов</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Ticiana Deluxe</h1>
+    <p class="sub">Калькулятор формул колорантов · <span id="verLabel">загрузка…</span></p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>1. Продукт</h2>
+      <div class="grid2">
+        <label>
+          Линия краски
+          <input id="productSearch" type="search" placeholder="фильтр: Ticiana, Фарбитекс, BELUCCI, MODELLA…" />
+          <select id="product" size="6"></select>
+        </label>
+        <label>
+          Веер цветов
+          <select id="subproduct" size="6"></select>
+        </label>
+      </div>
+      <p class="muted" id="loadStatus"></p>
+    </section>
+
+    <section class="card">
+      <h2>2. Цвет</h2>
+      <div class="grid2">
+        <label>
+          База
+          <select id="baseFilter">
+            <option value="">— все базы —</option>
+          </select>
+        </label>
+        <label>
+          Поиск по коду
+          <input id="search" type="search" placeholder="например: S 1502-Y50R, RAL 5002, 1011P…" />
+        </label>
+      </div>
+      <label>
+        Цвет
+        <select id="color" size="8"></select>
+      </label>
+    </section>
+
+    <section class="card">
+      <h2>3. Сколько замешать</h2>
+      <div class="grid2">
+        <label>
+          Количество
+          <input id="amount" type="number" value="0.9" min="0.01" step="0.01" />
+        </label>
+        <label>
+          Единица
+          <select id="unit">
+            <option value="L">литры</option>
+            <option value="ml">миллилитры</option>
+            <option value="kg">килограммы</option>
+            <option value="g">граммы</option>
+          </select>
+        </label>
+        <label>
+          Плотность базы, г/мл
+          <input id="density" type="number" value="1.30" min="0.5" max="2.5" step="0.01" />
+        </label>
+      </div>
+      <button id="calc">Рассчитать</button>
+    </section>
+
+    <section class="card" id="resultCard" hidden>
+      <h2>Формула на <span id="resLabel"></span></h2>
+      <div class="colorPreview">
+        <div id="colorSwatch"></div>
+        <div>
+          <div id="resColorName"></div>
+          <div class="muted" id="resProduct"></div>
+        </div>
+      </div>
+      <table id="result">
+        <thead>
+          <tr>
+            <th>Колорант</th>
+            <th>Название</th>
+            <th class="num">мл</th>
+            <th class="num">граммы</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Итого колорантов</td>
+            <td class="num" id="totMl">—</td>
+            <td class="num" id="totG">—</td>
+          </tr>
+        </tfoot>
+      </table>
+      <p class="muted">База: <span id="baseName"></span>. Эталонный размер банки: <span id="canName"></span>. Множитель силы: <span id="multName">1.0</span>.</p>
+    </section>
+
+    <section class="card">
+      <h2>Источник данных</h2>
+      <p class="muted">База колеровочной программы <code>AdsPro</code> (Hongpu) с дозатором TINTEC ADS — формулы Ticiana Deluxe и линеек Фарбитекс на 16 колорантах H.PU. Всего <span id="totalFormulas">—</span> формул в <span id="totalProducts">—</span> продуктах. Файл линии загружается при выборе.</p>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
