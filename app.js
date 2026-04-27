@@ -161,7 +161,22 @@ function onSubproductChange() {
     }))],
     (o) => ({ value: o.v, textContent: o.t })
   );
+  syncCanInfo(sp);
   refreshColorList();
+}
+
+// Show which reference can the formulas in this product line are calibrated
+// against — taken from ProSize[0] in tint_book.ini. AdsPro stores formulas
+// per reference can; everything else is a linear scale of those values.
+function syncCanInfo(sp) {
+  const refSize = sp?.sizes?.[0];
+  const unit = sp?.unit || "LT";
+  if (refSize == null) {
+    $("canInfo").textContent = "— выберите продукт —";
+    return;
+  }
+  const noun = unit === "KG" ? "масса базы" : "объём базы";
+  $("canInfo").textContent = `Формула задана на банку ${refSize} ${unit} (${noun}).`;
 }
 
 function refreshColorList() {
