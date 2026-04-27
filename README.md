@@ -2,7 +2,7 @@
 
 Браузерный калькулятор формул колорантов для системы тонирования **AdsPro** (Hongpu / TINTEC), на которой построена линейка **Ticiana Deluxe** (Фарбитекс) и сопутствующие линейки заводских красок. Работает без сервера — чистый HTML/CSS/JS.
 
-**Live:** https://catolseo.github.io/ticiana-color/
+**Live:** catolseo.github.io/ticiana-color
 
 ## Для кого
 
@@ -110,8 +110,8 @@ git add -A && git commit -m "Update formulas" && git push
 
 Формулы принадлежат «Фарбитекс» / лицензиарам Ticiana Deluxe; программа ADS-Pro — Hongpu Machinery Manufacture Co. Ltd. (Шуньдэ, Гуандун, КНР), © 2018 IRO Group Limited. Этот репозиторий — инструмент-калькулятор для уже приобретённой базы; повторное распространение базы данных формул отдельно от лицензированного дозатора TINTEC ADS / шейкера TINTEC HS-3T не предусмотрено.
 
-## Полезные ссылки
+## Источники
 
-- [Ticiana Deluxe](https://ticiana-deluxe.ru/) — линейка декоративных красок и фактурных штукатурок «Фарбитекс»
-- [Фарбитекс](https://www.farbitex.ru/) — производитель ЛКМ (Иваново)
-- Hongpu Machinery — официальный сайт `www.hpuglobal.com`, ADS-Pro, ADS-Maintenance, ADS-Link, дозаторы серии ATS / NDS / 12 / 14 / 16 / 18 / 24
+- Ticiana Deluxe — линейка декоративных красок и фактурных штукатурок «Фарбитекс»
+- Фарбитекс — производитель ЛКМ, Иваново
+- Hongpu Machinery — ADS-Pro, ADS-Maintenance, ADS-Link, дозаторы серии ATS / NDS / 12 / 14 / 16 / 18 / 24
