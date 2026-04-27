@@ -145,6 +145,8 @@ tfoot td { font-weight: 600; border-bottom: 0; }
 }
 
 .muted { color: var(--muted); font-size: 13px; }
+.hint { color: var(--muted); font-weight: 400; font-size: 12px; }
+input:disabled { background: #f5f3ee; cursor: not-allowed; }
 code {
   background: #f0ece2;
   padding: 1px 5px;

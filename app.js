@@ -48,6 +48,19 @@ function init() {
   $("color").addEventListener("change", onColorChange);
   $("calc").addEventListener("click", calculate);
   $("density").addEventListener("input", () => { $("density").dataset.userEdited = "1"; });
+  $("unit").addEventListener("change", syncDensityVisibility);
+  syncDensityVisibility();
+}
+
+// Density is only used to convert kg/g <-> mL (per AdsPro manual). For L/mL
+// inputs the field is irrelevant, so we disable it to avoid the impression
+// that changing it affects the result.
+function syncDensityVisibility() {
+  const unit = $("unit").value;
+  const needs = unit === "kg" || unit === "g";
+  const wrap = $("density").closest("label");
+  $("density").disabled = !needs;
+  if (wrap) wrap.style.opacity = needs ? "" : "0.45";
 }
 
 function fillSelect(sel, items, toOption) {
