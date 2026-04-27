@@ -47,6 +47,7 @@ function init() {
   $("search").addEventListener("input", debounce(refreshColorList, 120));
   $("color").addEventListener("change", onColorChange);
   $("calc").addEventListener("click", calculate);
+  $("density").addEventListener("input", () => { $("density").dataset.userEdited = "1"; });
 }
 
 function fillSelect(sel, items, toOption) {
@@ -113,6 +114,7 @@ function onProductChange() {
     textContent: `${sp.code} — ${sp.n} формул`,
   }));
   if ($("subproduct").options.length) $("subproduct").selectedIndex = 0;
+  delete $("density").dataset.userEdited;
   ensureProductLoaded(p.id).then(onSubproductChange);
 }
 
@@ -171,6 +173,19 @@ function onColorChange() {
   const hex = rgbToHex(row?.[F_RGB]);
   document.body.style.setProperty("--selected-color", hex || "transparent");
   document.body.classList.toggle("has-color", !!hex);
+  syncDensity(row);
+}
+
+// Auto-fill density from sp.dens[base] when the user hasn't manually overridden it.
+// AdsPro ProDens often equals 1.0 (placeholder for legacy products); we still apply
+// it so the field reflects what the source database carries for that base.
+function syncDensity(row) {
+  const sp = currentSubproduct();
+  const baseCode = row?.[F_BASE];
+  const dens = sp?.dens?.[baseCode];
+  const input = $("density");
+  if (dens == null) return;
+  if (!input.dataset.userEdited) input.value = dens;
 }
 
 function parseFormula(str) {
