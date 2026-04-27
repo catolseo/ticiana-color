@@ -50,6 +50,8 @@ function init() {
   $("density").addEventListener("input", () => { $("density").dataset.userEdited = "1"; });
   $("unit").addEventListener("change", syncDensityVisibility);
   syncDensityVisibility();
+  $("areaCalc").addEventListener("click", computeFromArea);
+  $("yield").addEventListener("input", () => { $("yield").dataset.userEdited = "1"; });
 }
 
 // Density is only used to convert kg/g <-> mL (per AdsPro manual). For L/mL
@@ -128,6 +130,8 @@ function onProductChange() {
   }));
   if ($("subproduct").options.length) $("subproduct").selectedIndex = 0;
   delete $("density").dataset.userEdited;
+  delete $("yield").dataset.userEdited;
+  syncCoverage(p);
   ensureProductLoaded(p.id).then(onSubproductChange);
 }
 
@@ -177,6 +181,49 @@ function syncCanInfo(sp) {
   }
   const noun = unit === "KG" ? "масса базы" : "объём базы";
   $("canInfo").textContent = `Формула задана на банку ${refSize} ${unit} (${noun}).`;
+}
+
+// Coverage (m²/L or m²/kg) from the manufacturer catalogue. Auto-fills the
+// 'yield' input with mid-range; user can override. Unit label switches to
+// match what the catalogue specifies, so KG-only products (thick stuccos)
+// don't get tagged with m²/L.
+function syncCoverage(p) {
+  const cov = p?.cov;
+  const info = $("coverageInfo");
+  const yieldInput = $("yield");
+  const unitLabel = $("yieldUnit");
+  if (!cov) {
+    info.textContent = "— расход не задан в каталоге производителя —";
+    yieldInput.value = "";
+    yieldInput.placeholder = "—";
+    delete yieldInput.dataset.userEdited;
+    return;
+  }
+  const isMass = cov.unit === "m2_per_kg";
+  unitLabel.textContent = isMass ? "м²/кг" : "м²/л";
+  const range = cov.min === cov.max ? `${cov.min}` : `${cov.min}–${cov.max}`;
+  info.textContent = `Расход по каталогу: ${range} ${unitLabel.textContent} (на 1 слой).`;
+  if (!yieldInput.dataset.userEdited) {
+    yieldInput.value = ((cov.min + cov.max) / 2).toFixed(2);
+  }
+}
+
+// Solve for amount given area: amount = (area * coats / yield) * (1 + reserve%).
+// Pushes result into #amount and switches #unit so the math downstream picks
+// the right conversion (m²/L → litres, m²/kg → kilograms).
+function computeFromArea() {
+  const p = currentProduct();
+  const area = parseFloat($("area").value);
+  const coats = Math.max(1, parseInt($("coats").value, 10) || 1);
+  const y = parseFloat($("yield").value);
+  const reserve = Math.max(0, parseFloat($("reserve").value) || 0);
+  if (!(area > 0) || !(y > 0)) return;
+
+  const needed = (area * coats / y) * (1 + reserve / 100);
+  const isMass = p?.cov?.unit === "m2_per_kg";
+  $("amount").value = needed.toFixed(2);
+  $("unit").value = isMass ? "kg" : "L";
+  syncDensityVisibility();
 }
 
 function refreshColorList() {

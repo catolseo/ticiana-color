@@ -1,0 +1,553 @@
+{
+  "Tic Del Lantica Parete Ultima": {
+    "min": 5.0,
+    "max": 8.3,
+    "unit": "m2_per_L",
+    "source": "https://spektrum.su/grunt-dekorativnyj-s-effektom-treshin-ticiana-deluxe-l-antica-parete-1-l.html"
+  },
+  "Ticiana Deluxe ALEXANDRIA": {
+    "min": 2.0,
+    "max": 3.3,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/shtukaturki/alexandria_aleksandriya_shtukaturka_akrilovaya_fakturnaya_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe ARIA": {
+    "min": 5.0,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/shtukaturki/aria_ariya_shtukaturka_tonkosloynaya_venetsianskaya_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe ASTI бронз.": {
+    "min": 5.0,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/kraski_dekorativnye/asti_asti_kraska_akrilovaya_s_kvartsevym_napolnitelem_metallicheskiy_effekt_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe ASTI зол.": {
+    "min": 5.0,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/kraski_dekorativnye/asti_asti_kraska_akrilovaya_s_kvartsevym_napolnitelem_metallicheskiy_effekt_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe ASTI медь": {
+    "min": 5.0,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/kraski_dekorativnye/asti_asti_kraska_akrilovaya_s_kvartsevym_napolnitelem_metallicheskiy_effekt_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe ASTI ок. жел.": {
+    "min": 5.0,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/kraski_dekorativnye/asti_asti_kraska_akrilovaya_s_kvartsevym_napolnitelem_metallicheskiy_effekt_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe ASTI рубин": {
+    "min": 5.0,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/kraski_dekorativnye/asti_asti_kraska_akrilovaya_s_kvartsevym_napolnitelem_metallicheskiy_effekt_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe ASTI сер. инт": {
+    "min": 5.0,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/kraski_dekorativnye/asti_asti_kraska_akrilovaya_s_kvartsevym_napolnitelem_metallicheskiy_effekt_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe ASTI сер. экст": {
+    "min": 5.0,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/kraski_dekorativnye/asti_asti_kraska_akrilovaya_s_kvartsevym_napolnitelem_metallicheskiy_effekt_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe BELUCCI": {
+    "min": 4.5,
+    "max": 5.6,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/kraski_dlya_sten_potolkov_mebeli/bellucci_belluchchi_kraska_glubokomatovaya_s_vysokoy_stoykostyu_k_istiraniyu_ticiana_deluxe_/"
+  },
+  "Ticiana Deluxe CACHEMIRE": {
+    "min": 2.9,
+    "max": 5.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/pokrytiya_dekorativnye_/cashemire_kashemir_pokrytie_dekorativnoe_matovoe_s_effektom_velyura_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe CALCESTRUZZO": {
+    "min": 2.0,
+    "max": 3.3,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/shtukaturki/calcestruzzo_kalchestruzzo_dekorativnaya_shtukaturka_s_effektom_betona_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe CAMOSCINO": {
+    "min": 5.0,
+    "max": 6.7,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/pokrytiya_dekorativnye_/camoscino_kamoskino_dekorativnoe_pokrytie_s_effektom_zamshi_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe CEMENTO": {
+    "min": 1.1,
+    "max": 1.4,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/shtukaturki/cemento_chemento_shtukaturka_dekorativnaya_s_effektom_khudozhestvennogo_tsementa_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe CHARME": {
+    "min": 1.2,
+    "max": 2.2,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/kraski_dekorativnye/charme_sharm_kraska_akrilovaya_fakturnaya_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe DUNA": {
+    "min": 5.0,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/pokrytiya_dekorativnye_/duna_dyuna_pokrytie_dekorativnoe_s_perlamutrovym_effektom_s_mikrosferami_ticiana_deluxe_/"
+  },
+  "Ticiana Deluxe Fondo 1": {
+    "min": 6.7,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/grunt_kraski_ukryvnye/fondo_1_fondo_1_grunt_kraska_pod_dekorativnoe_pokrytie_vlagostoykaya_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe Fondo 2": {
+    "min": 6.7,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/grunt_kraski_ukryvnye/fondo_2_fondo_2_grunt_kraska_pod_dekorativnoe_pokrytie_moyushchayasya_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe LUMINOUR": {
+    "min": 6.7,
+    "max": 20.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/laki_vosk/luminor_lyuminor_lak_lessiruyushchiy_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe MAESTRO": {
+    "min": 2.5,
+    "max": 5.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/pokrytiya_dekorativnye_/maestro_maestro_dekorativnoe_strukturnoe_perlamutrovoe_pokrytie_ticiana_deluxe_/"
+  },
+  "Ticiana Deluxe MODELLA инт": {
+    "min": 0.8,
+    "max": 1.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/shtukaturki/modella_modella_shtukaturka_akrilovaya_modeliruyushchaya_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe MODELLA экст": {
+    "min": 0.8,
+    "max": 1.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/shtukaturki/modella_modella_shtukaturka_akrilovaya_modeliruyushchaya_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe PERLA DI ROMA": {
+    "min": 16.7,
+    "max": 25.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/emali_dekorativnye/perla_di_roma_perla_di_roma_emal_akrilovaya_s_effektom_zhemchuga_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe Prima Bianco": {
+    "min": 4.5,
+    "max": 5.6,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/kraski_dlya_sten_potolkov_mebeli/prima_bianco_prima_byanko_kraska_akrilovaya_vysokoukryvistaya_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe Prima Lavato": {
+    "min": 4.5,
+    "max": 5.6,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/kraski_dlya_sten_potolkov_mebeli/prima_lavato_prima_lavato_kraska_akrilovaya_moyushchayasya_vysokoukryvistaya_s_nanoserebrom_ticiana_/"
+  },
+  "Ticiana Deluxe SABBIO matt": {
+    "min": 5.0,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/pokrytiya_dekorativnye_/sabbio_matt_sabbio_matt_dekorativnoe_pokrytie_s_effektom_peschanykh_vikhrey_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe SETERIA бел.": {
+    "min": 5.0,
+    "max": 6.7,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/pokrytiya_dekorativnye_/seteria_seteria_dekorativnoe_pokrytie_s_effektom_shelka_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe SETERIA граф.": {
+    "min": 5.0,
+    "max": 6.7,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/pokrytiya_dekorativnye_/seteria_seteria_dekorativnoe_pokrytie_s_effektom_shelka_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe SETERIA зол жем": {
+    "min": 5.0,
+    "max": 6.7,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/pokrytiya_dekorativnye_/seteria_seteria_dekorativnoe_pokrytie_s_effektom_shelka_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe SETERIA зол.": {
+    "min": 5.0,
+    "max": 6.7,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/pokrytiya_dekorativnye_/seteria_seteria_dekorativnoe_pokrytie_s_effektom_shelka_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe SETERIA сер.": {
+    "min": 5.0,
+    "max": 6.7,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/pokrytiya_dekorativnye_/seteria_seteria_dekorativnoe_pokrytie_s_effektom_shelka_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe TRAVERTINO NAT": {
+    "min": 1.1,
+    "max": 1.4,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/shtukaturki/travertino_naturale_travertino_naturale_shtukaturka_dekorativnaya_na_izvesti_s_effektom_kamnya_trave/"
+  },
+  "Ticiana Deluxe VELLURO": {
+    "min": 5.0,
+    "max": 6.7,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/pokrytiya_dekorativnye_/velluro_vellyuro_pokrytie_dekorativnoe_s_effektom_velyura_serebro_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe VENIERA": {
+    "min": 5.0,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/shtukaturki/veniera_veniera_shtukaturka_venetsianskaya_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe VERSAILLES зол.": {
+    "min": 5.0,
+    "max": 6.7,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/pokrytiya_dekorativnye_/versailles_versaylles_dekorativnoe_pokrytie_s_effektom_perlamutrovogo_barkhata_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe VERSAILLES сер.": {
+    "min": 5.0,
+    "max": 6.7,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/pokrytiya_dekorativnye_/versailles_versaylles_dekorativnoe_pokrytie_s_effektom_perlamutrovogo_barkhata_ticiana_deluxe/"
+  },
+  "Ticiana Deluxe Дек. покр. Estetica": {
+    "min": 5.0,
+    "max": 6.7,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/pokrytiya_dekorativnye_/estetica_estetika_pokrytie_dekorativnoe_s_effektom_matovogo_shelka_ticiana_deluxe_/"
+  },
+  "Ticiana Deluxe ПЕСЧАНИК": {
+    "min": 1.0,
+    "max": 1.2,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/shtukaturki/grande_roccia_grande_rochcha_shtukaturka_peschanik_ticiana_deluxe/"
+  },
+  "TicianaDeluxe PIETRE D'ITAL": {
+    "min": 1.1,
+    "max": 1.4,
+    "unit": "m2_per_L",
+    "source": "https://deluxe.abcfarben.ru/product/dekorativnye_materialy/shtukaturki/pietre_ditalia_petre_di_italia_shtukaturka_s_effektom_naturalnogo_travertina_ticiana_deluxe/"
+  },
+  "WOOD Лазурь для дерева": {
+    "min": 5.6,
+    "max": 8.3,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/wood_derevozashchita/propitki_krasyashchie_dlya_drevesiny/lazur_akrilovaya_dlya_dereva_zashchitno_krasyashchaya_farbitex_profi_wood/"
+  },
+  "WOOD Лак парк полиурет глянц": {
+    "min": 13.3,
+    "max": 14.3,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/wood_derevozashchita/laki_po_derevu/dlya_pola_i_parketa/lak_parketnyy_alkidno_uretanovyy_iznosostoykiy_farbitex_profi_wood/"
+  },
+  "WOOD Лак парк полиурет мат": {
+    "min": 13.3,
+    "max": 14.3,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/wood_derevozashchita/laki_po_derevu/dlya_pola_i_parketa/lak_parketnyy_alkidno_uretanovyy_iznosostoykiy_farbitex_profi_wood/"
+  },
+  "WOOD Лак пентафл высокоглянц": {
+    "min": 13.3,
+    "max": 14.3,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/wood_derevozashchita/laki_po_derevu/universalnye/lak_alkidnyy_pentaftalevyy_vysokoglyantsevyy_farbitex_profi_wood/"
+  },
+  "WOOD Лак по дереву унив": {
+    "min": 10.0,
+    "max": 12.5,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/wood_derevozashchita/laki_po_derevu/universalnye/lak_universalnyy_toniruyushchiy_po_derevu_farbitex_profi_wood/"
+  },
+  "WOOD Масло для тер и сад меб": {
+    "min": 6.7,
+    "max": 12.5,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/wood_derevozashchita/masla_olify/masla/maslo_dlya_terras_i_sadovoy_mebeli_koleruemoe_farbitex_profi_wood/"
+  },
+  "WOOD краска для дер фас Байкал": {
+    "min": 8.3,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/wood_derevozashchita/kraska/baykal_kraska_dlya_derevyannykh_fasadov_i_intererov_farbitex_profi_wood_extra/"
+  },
+  "Олеколор ВДК Интерьерная": {
+    "min": 9.3,
+    "max": 15.6,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/interernye_dlya_sten_i_potolkov/kraska_akrilovaya_interernaya_olecolor/"
+  },
+  "Олеколор ВДК Моющаяся": {
+    "min": 9.3,
+    "max": 15.6,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/moyushchiesya/kraska_akrilovaya_moyushchayasya_olecolor_/"
+  },
+  "Олеколор ВДК Фасадная": {
+    "min": 9.3,
+    "max": 15.6,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/fasadnye/kraska_akrilovaya_fasadnaya_olecolor/"
+  },
+  "Фарбитекс ВДК Интерьерная": {
+    "min": 5.6,
+    "max": 7.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/interernye_dlya_sten_i_potolkov/kraska_akrilovaya_interernaya_farbitex/"
+  },
+  "Фарбитекс ВДК Интерьерная NEW": {
+    "min": 5.6,
+    "max": 7.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/interernye_dlya_sten_i_potolkov/kraska_akrilovaya_interernaya_farbitex/",
+    "note": "NEW: assumed equivalent to Фарбитекс ВДК Интерьерная"
+  },
+  "Фарбитекс ВДК Кухни и ванн NEW": {
+    "min": 5.6,
+    "max": 7.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/moyushchiesya/kraska_akrilovaya_dlya_kukhni_i_vannoy_farbitex/",
+    "note": "NEW: assumed equivalent to Кухни и ванные"
+  },
+  "Фарбитекс ВДК Кухни и ванные": {
+    "min": 5.6,
+    "max": 7.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/moyushchiesya/kraska_akrilovaya_dlya_kukhni_i_vannoy_farbitex/"
+  },
+  "Фарбитекс ВДК Моющаяся": {
+    "min": 5.6,
+    "max": 7.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/moyushchiesya/kraska_akrilovaya_moyushchayasya_farbitex/"
+  },
+  "Фарбитекс ВДК Моющаяся NEW": {
+    "min": 5.6,
+    "max": 7.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/moyushchiesya/kraska_akrilovaya_moyushchayasya_farbitex/",
+    "note": "NEW: assumed equivalent to Моющаяся"
+  },
+  "Фарбитекс ВДК Фасадная": {
+    "min": 5.6,
+    "max": 7.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/fasadnye/kraska_akrilovaya_fasadnaya_farbitex/"
+  },
+  "Фарбитекс ВДК Фасадная NEW": {
+    "min": 5.6,
+    "max": 7.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/fasadnye/kraska_akrilovaya_fasadnaya_farbitex/",
+    "note": "NEW: assumed equivalent to Фасадная"
+  },
+  "Фарбитекс Профи 4 Season": {
+    "min": 9.3,
+    "max": 11.7,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/fasadnye/kraska_akrilovaya_fasadnaya_vsesezonnaya_4_season_farbitex_profi/"
+  },
+  "Фарбитекс Профи AgPower пр-мик": {
+    "min": 9.3,
+    "max": 14.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/moyushchiesya/kraska_moyushchayasya_protivomikrobnaya_s_nanoserebrom_agpower_argentum_pauer_farbitex_profi_baza_a/"
+  },
+  "Фарбитекс Профи BaseCover": {
+    "min": 6.2,
+    "max": 8.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/podgotovka_poverkhnosti/gruntovki_ukryvayushchie/grunt_kraska_akrilovaya_ukryvnaya_basecover_beyskauer_pod_dekorativnye_pokrytiya_farbitex_profi/"
+  },
+  "Фарбитекс Профи BaseCover NEW": {
+    "min": 6.2,
+    "max": 8.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/podgotovka_poverkhnosti/gruntovki_ukryvayushchie/grunt_kraska_akrilovaya_ukryvnaya_basecover_beyskauer_pod_dekorativnye_pokrytiya_farbitex_profi/",
+    "note": "NEW: assumed equivalent to BaseCover"
+  },
+  "Фарбитекс Профи DUPON": {
+    "min": 6.2,
+    "max": 8.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/dekorativnye_pokrytiya/dekorativnoe_pokrytie_mokryy_shelk_dupon_dyupon_farbitex_profi/"
+  },
+  "Фарбитекс Профи Latex инт": {
+    "min": 9.1,
+    "max": 11.8,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/moyushchiesya/kraska_moyushchayasya_latex_lateks_lateksnaya_farbitex_profi/"
+  },
+  "Фарбитекс Профи Latex экст": {
+    "min": 9.1,
+    "max": 11.8,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/moyushchiesya/kraska_moyushchayasya_latex_lateks_lateksnaya_farbitex_profi/"
+  },
+  "Фарбитекс Профи SHAMMY": {
+    "min": 6.2,
+    "max": 8.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/dekorativnye_pokrytiya/dekorativnoe_pokrytie_c_effektom_zamshi_shammy_shammi_farbitex_profi/"
+  },
+  "Фарбитекс Профи SOFTSILK": {
+    "min": 6.2,
+    "max": 8.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/dekorativnye_pokrytiya/dekorativnoe_pokrytie_matovyy_shelk_softsilk_softsilk_farbitex_profi/"
+  },
+  "Фарбитекс Профи Supermatt": {
+    "min": 9.1,
+    "max": 12.5,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/interernye_dlya_sten_i_potolkov/kraska_akrilovaya_sovershenno_matovaya_vysokoukryvistaya_supermatt_supermatt_farbitex_profi/"
+  },
+  "Фарбитекс Профи Бар Velvet": {
+    "min": 6.2,
+    "max": 8.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/dekorativnye_pokrytiya/pokrytie_dekorativnoe_s_effektom_perlamutrovogo_barkhata_serebro_velvet_velvet_farbitex_profi/"
+  },
+  "Фарбитекс Профи Краска Eurofacade": {
+    "min": 6.7,
+    "max": 10.0,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/fasadnye/kraska_fasadnaya_silikonovaya_samoochishchayushchayasya_vysokoprochnaya_eurofacade_evrofasad_farbite/"
+  },
+  "Фарбитекс Профи Краска White-X": {
+    "min": 9.3,
+    "max": 15.6,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/interernye_dlya_sten_i_potolkov/kraska_akrilovaya_vlagostoykaya_interernaya_superbelaya_baza_a_white_x_vayt_iks_farbitex_profi/"
+  },
+  "Фарбитекс Профи Краска факт Textura": {
+    "min": 1.1,
+    "max": 1.1,
+    "unit": "m2_per_kg",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/kraski_dekorativnye/kraska_akrilovaya_dekorativnaya_fakturnaya_textura_tekstura_farbitex_profi/"
+  },
+  "Фарбитекс Профи Краска-грунт OSB": {
+    "min": 9.3,
+    "max": 9.3,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/spetsializirovannye/kraska_grunt_dlya_osb_plit_3v1_armirovannaya_farbitex_profi/"
+  },
+  "Фарбитекс Профи Моделир. инт": {
+    "min": 0.3,
+    "max": 0.7,
+    "unit": "m2_per_kg",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/shtukaturki/shtukaturka_modeliruyushchaya_farbitex_profi/"
+  },
+  "Фарбитекс Профи Моделир. экст": {
+    "min": 0.3,
+    "max": 0.7,
+    "unit": "m2_per_kg",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/shtukaturki/shtukaturka_modeliruyushchaya_farbitex_profi/"
+  },
+  "Фарбитекс Профи Штук Структ": {
+    "min": 0.3,
+    "max": 0.7,
+    "unit": "m2_per_kg",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/shtukaturki/shtukaturka_strukturnaya_farbitex_profi/"
+  },
+  "Фарбитекс Профи Штук Фактур": {
+    "min": 0.3,
+    "max": 0.7,
+    "unit": "m2_per_kg",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/shtukaturki/shtukaturka_fakturnaya_farbitex_profi/"
+  },
+  "Фарбитекс Профи Штук. Мультист": {
+    "min": 0.8,
+    "max": 1.4,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/shtukaturki/shtukaturka_dekorativnaya_multistrukturnaya_farbitex_profi/"
+  },
+  "Фарбитекс Профи Штукатурка Короед": {
+    "min": 0.3,
+    "max": 0.4,
+    "unit": "m2_per_kg",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/shtukaturki/shtukaturka_dekorativnaya_rollernaya_s_effektom_koroed_srednezernistaya_farbitex_profi/"
+  },
+  "Фарбитекс Профи Эм ак зол инт": {
+    "min": 4.3,
+    "max": 18.2,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/emali_dekorativnye/emal_akrilovaya_perlamutrovaya_iznosostoykaya_universalnaya_farbitex_profi_/"
+  },
+  "Фарбитекс Профи Эм ак зол экс": {
+    "min": 4.3,
+    "max": 18.2,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/emali_dekorativnye/emal_akrilovaya_perlamutrovaya_iznosostoykaya_universalnaya_farbitex_profi_/"
+  },
+  "Фарбитекс Профи Эм акр сер инт": {
+    "min": 10.0,
+    "max": 16.7,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/emali_dekorativnye/emal_akrilovaya_zhemchug_farbitex_profi/"
+  },
+  "Фарбитекс Профи Эм акр сер экс": {
+    "min": 10.0,
+    "max": 16.7,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/emali_dekorativnye/emal_akrilovaya_zhemchug_farbitex_profi/"
+  },
+  "Фарбитекс Профи Эм рад инт": {
+    "min": 9.1,
+    "max": 15.4,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/emali_grunt_emali/dlya_radiatorov/emal_akrilovaya_dlya_radiatorov_farbitex_profi/"
+  },
+  "Фарбитекс Профи Эм рад экст": {
+    "min": 9.1,
+    "max": 15.4,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/emali_grunt_emali/dlya_radiatorov/emal_akrilovaya_dlya_radiatorov_farbitex_profi/"
+  },
+  "Фарбитекс Профи арт-бетон": {
+    "min": 0.4,
+    "max": 1.0,
+    "unit": "m2_per_kg",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/shtukaturki/shtukaturka_dekorativnaya_art_beton_farbitex_profi/"
+  },
+  "Фарбитекс Профи венецианская": {
+    "min": 2.5,
+    "max": 4.0,
+    "unit": "m2_per_kg",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/shtukaturki/shtukaturka_venetsianskaya_farbitex_profi/"
+  },
+  "Фарбитекс Профи краска ELASTIC": {
+    "min": 6.7,
+    "max": 12.5,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/interernye_dlya_sten_i_potolkov/kraska_akrilovaya_dlya_sten_i_vsekh_tipov_oboev_elastic_elastik_farbitex_profi/"
+  },
+  "Фарбитекс Профи травертин": {
+    "min": 0.5,
+    "max": 1.0,
+    "unit": "m2_per_kg",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/shtukaturki/shtukaturka_dekorativnaya_travertin_farbitex_profi/"
+  },
+  "Фарбитекс Профи фин кр. STORM": {
+    "min": 5.6,
+    "max": 8.3,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/dekorativnye_materialy/dekorativnye_pokrytiya/kraska_finishnaya_s_kvartsevym_napolnitelem_belyy_perlamutr_storm_shtorm_farbitex_profi/"
+  },
+  "ФарбитексПрофиColor-X ак вл ин": {
+    "min": 6.7,
+    "max": 11.1,
+    "unit": "m2_per_L",
+    "source": "https://abcfarben.ru/product/kraski_i_emali/interernye_dlya_sten_i_potolkov/kraska_akrilovaya_vlagostoykaya_interernaya_baza_s_color_x_kolor_iks_farbitex_profi/"
+  }
+}

@@ -213,6 +213,11 @@ def write_js(path, var_assign, obj):
 
 def main():
     drop_ml, load_date, bases, colorants, products = read_ini()
+
+    # Per-product coverage table (м²/л or м²/кг) scraped from manufacturer
+    # catalogs. Keys match product names in tint_book.ini exactly.
+    cov_path = os.path.join(ROOT, "data", "coverage.json")
+    coverage = json.load(open(cov_path, encoding="utf-8")) if os.path.exists(cov_path) else {}
     cnt_rgb = {c["id"]: hex_to_rgb(c["hex"]) for c in colorants}
 
     # Build flat product catalog. We use a 1-based numeric ID per product line for
@@ -254,12 +259,20 @@ def main():
             })
             total += n
         if rows:
-            product_catalog.append({
+            cov = coverage.get(prod_name)
+            entry = {
                 "id": str(pid),
                 "code": prod_name,
                 "descr": prod_name,
                 "subproducts": fandecks_meta,
-            })
+            }
+            if cov and cov.get("min") is not None:
+                entry["cov"] = {
+                    "min": cov["min"],
+                    "max": cov["max"],
+                    "unit": cov["unit"],  # "m2_per_L" | "m2_per_kg"
+                }
+            product_catalog.append(entry)
             out_path = os.path.join(OUT_DIR, "formulas", f"p{pid}.js")
             write_js(out_path, f"window.TICIANA_FORMULAS_P{pid}", rows)
             print(f"  p{pid}.js {prod_name[:40]:<40}: {len(rows):>5,} formulas, {os.path.getsize(out_path):>9,} B")
