@@ -328,13 +328,16 @@ def main():
 
     data_v = short_hash(core_path)
     app_v = short_hash(os.path.join(OUT_DIR, "app.js"))
+    css_v = short_hash(os.path.join(OUT_DIR, "styles.css"))
     html = open(index_path, encoding="utf-8").read()
     html = re.sub(r'<script src="data\.js(?:\?v=[^"]*)?"></script>',
                   f'<script src="data.js?v={data_v}"></script>', html)
     html = re.sub(r'<script src="app\.js(?:\?v=[^"]*)?"></script>',
                   f'<script src="app.js?v={app_v}"></script>', html)
+    html = re.sub(r'<link rel="stylesheet" href="styles\.css(?:\?v=[^"]*)?" ?/>',
+                  f'<link rel="stylesheet" href="styles.css?v={css_v}" />', html)
     open(index_path, "w", encoding="utf-8", newline="").write(html)
-    print(f"index.html cache-bust: data.js?v={data_v}, app.js?v={app_v}")
+    print(f"index.html cache-bust: data.js?v={data_v}, app.js?v={app_v}, styles.css?v={css_v}")
 
 
 if __name__ == "__main__":
